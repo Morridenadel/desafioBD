@@ -3,12 +3,11 @@ class DocumentaryFilmsController < ApplicationController
 
   # GET /documentary_films or /documentary_films.json
   def index
-    @documentary_films = DocumentaryFilm.all
+    @documentary_films = DocumentaryFilm.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /documentary_films/1 or /documentary_films/1.json
   def show
-    @documentary_film = DocumentaryFilm.all
   end
 
   # GET /documentary_films/new

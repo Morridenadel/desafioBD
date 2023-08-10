@@ -20,6 +20,9 @@
         <% end %>
       </tbody>
     </table>
+    <div class="digg_pagination .page_info b">
+      <%= will_paginate(@Series, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+    </div>
   </div>
 </div>
 
