@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <h1>Peliculas</h1>
+  
+  <%= link_to "Nueva pelicula", new_movie_path %>
+  
+  <br>
+  <div id="movies">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Synopsis</th>
+          <th scope="col">Director</th>
+          <th scope="col" colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @movies.each do |movie| %>
+          <%= render movie %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="digg_pagination .page_info b">
+      <%= will_paginate(@Movies, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+    </div>
+  </div>
+</div>
+
+
+

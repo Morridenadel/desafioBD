@@ -1,0 +1,12 @@
+</div>
+  <div id="<%= dom_id serie %>">
+    <tr>
+      <th scope="row"><%= serie.id %></th>
+      <td><%= serie.name %></td>
+      <td><%= serie.synopsis %></td>
+      <td><%= serie.diector %></td>
+      <td><%= link_to "Show this serie", serie %></td>
+      <td><%= link_to "Edit this serie", edit_series_path(serie) %></td>
+      <td><%= button_to "Destroy this serie", @serie, method: :delete %></td>
+    </tr>
+</div>

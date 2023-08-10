@@ -1,0 +1,13 @@
+</div>
+  <div id="<%= dom_id documentary_film %>">
+    <tr>
+      <th scope="row"><%= documentary_film.id %></th>
+      <td><%= documentary_film.name %></td>
+      <td><%= documentary_film.synopsis %></td>
+      <td><%= documentary_film.diector %></td>
+      <td><%= link_to "Show this documentary film", documentary_film %></td>
+      <td><%= link_to "Edit this documentary film", edit_documentary_film_path(documentary_film) %></td>
+      <td><%= button_to "Destroy this documentary film", @documentary_film, method: :delete %></td>
+    </tr>
+</div>
+

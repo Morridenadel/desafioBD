@@ -1,0 +1,12 @@
+</div>
+  <div id="<%= dom_id movie %>">
+    <tr>
+      <th scope="row"><%= movie.id %></th>
+      <td><%= movie.name %></td>
+      <td><%= movie.synopsis %></td>
+      <td><%= movie.director %></td>
+      <td><%= link_to "Show this movie", movie %></td>
+      <td><%= link_to "Edit this movie", edit_movie_path(movie) %></td>
+      <td><%= button_to "Destroy this movie", @movie, method: :delete %></td>
+    </tr>
+</div>
